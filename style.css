@@ -89,7 +89,7 @@ table td, table th { position: relative; padding: .3125rem .9375rem; min-height:
 .fed-col-xs2 { width: 16.66666667% }
 .fed-col-xs3 { width: 25% }
 .fed-col-xs4 { width: 33.33333333% }
-.fed-col-xs42 { width: 50% }
+.fed-col-xs42 { width: 33.33333333% }
 .fed-col-xs5 { width: 41.66666667% }
 .fed-col-xs6 { width: 50% }
 .fed-col-xs7 { width: 62.33333333% }
