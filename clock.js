@@ -1,4 +1,3 @@
-<script>
 function tick() {
 var hours, minutes, seconds, xfile;
 var intHours, intMinutes, intSeconds;
@@ -49,4 +48,3 @@ Clock.innerHTML = timeString;
 window.setTimeout("tick();", 100);
 }
 window.onload = tick;
-</script>
