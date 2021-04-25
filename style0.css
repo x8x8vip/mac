@@ -50,7 +50,7 @@ li { list-style: none }
 hr, img { border: 0 }
 hr { margin: .625rem 0; height: .0625rem; border-bottom: .0625rem solid #e2e2e2; transform: scaleY(.5); transform-origin: 0 0 }
 img { display: inline-block; vertical-align: middle }
-body { padding: 5rem 0 0; overflow-y: scroll; background-color: #f5f5f5; font-size: .875rem }
+body { padding: 0 0 0; overflow-y: scroll; background-color: #f5f5f5; font-size: .875rem }
 body, html { height: auto!important }
 h1, h2, h3, h4, h5, h6 { font-weight: 400 }
 input::-ms-clear {
@@ -89,7 +89,7 @@ table td, table th { position: relative; padding: .3125rem .9375rem; min-height:
 .fed-col-xs2 { width: 16.66666667% }
 .fed-col-xs3 { width: 25% }
 .fed-col-xs4 { width: 33.33333333% }
-.fed-col-xs42 { width: 50% }
+.fed-col-xs42 { width: 33.33333333% }
 .fed-col-xs5 { width: 41.66666667% }
 .fed-col-xs6 { width: 50% }
 .fed-col-xs7 { width: 62.33333333% }
@@ -237,7 +237,7 @@ table td, table th { position: relative; padding: .3125rem .9375rem; min-height:
 .fed-part-layout { padding: .3125rem; margin-top: .625rem }
 .fed-part-rows { position: relative; overflow: hidden }
 .fed-part-both:after, .fed-part-rows:after, .fed-part-rows:before { content: ""; display: block; clear: both }
-.fed-part-over { overflow: hidden }
+.fed-part-over { overflow: visible }
 .fed-part-zero { padding: 0 }
 .fed-part-curs { cursor: pointer }
 .fed-part-tips { position: absolute; right: .9375rem }
@@ -245,8 +245,8 @@ table td, table th { position: relative; padding: .3125rem .9375rem; min-height:
 .fed-part-3by2, .fed-part-5by2 { padding-top: 45% }
 .fed-part-5by3 { padding-top: 66.25% }
 .fed-part-2by3 { padding-top: 150% }
-.fed-part-2by32 { padding-top: 66.25% }
-.fed-part-2by33 { padding-top: 75.525% }
+.fed-part-2by32 { padding-top: 150% }
+.fed-part-2by33 { padding-top: 150% }
 .fed-part-16by9 { padding-top: 56.25% }
 .fed-part-height { min-height: 21.25rem; height: calc(100vh - 14.25rem) }
 .fed-part-search { margin: .625rem; border-width: .5px; border-radius: 1.875rem; line-height: 1.625rem }
@@ -258,7 +258,10 @@ table td, table th { position: relative; padding: .3125rem .9375rem; min-height:
 .fed-part-roun { border-radius: 100% }
 .fed-part-both { clear: both; zoom: 1 }
 .fed-part-both:after { zoom: 1; height: 0 }
-.fed-part-eone { display: -webkit-box!important; text-overflow: ellipsis; overflow: hidden; white-space: pre-wrap; -webkit-box-orient: vertical; -webkit-line-clamp: 3}
+/*.fed-part-eone { display: -webkit-box!important; text-overflow: ellipsis; overflow: hidden; white-space: pre-wrap; -webkit-box-orient: vertical; -webkit-line-clamp: 3}*/
+
+.fed-part-eone { display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap }
+
 .fed-part-eone2 { display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap }
 .fed-part-eone8 { display: -webkit-box!important; text-overflow: ellipsis; overflow: hidden; white-space: pre-wrap; -webkit-box-orient: vertical; -webkit-line-clamp: 1}
 .fed-part-esan, .fed-part-etwo { overflow: hidden; text-overflow: ellipsis; display: -webkit-box!important; -webkit-box-orient: vertical; -webkit-line-clamp: 2 }
@@ -399,7 +402,7 @@ table td, table th { position: relative; padding: .3125rem .9375rem; min-height:
 .fed-side-code .fed-side-text { padding: 0 15px 10px }
 .fed-casc-info, .fed-scre-list { padding: .625rem }
 .fed-casc-list .fed-this { cursor: not-allowed; pointer-events: none }
-.fed-casc-list dl, .fed-scre-list dl { padding: .9375rem 0; border-top: .0625rem dashed #e2e2e2; white-space: pre-wrap; overflow-y: hidden; overflow-x: auto; -webkit-overflow-scrolling: touch }
+.fed-casc-list dl, .fed-scre-list dl { padding: .9375rem 0; border-top: .0625rem dashed #e2e2e2; white-space: nowrap; overflow-y: hidden; overflow-x: auto; -webkit-overflow-scrolling: touch }
 .fed-casc-list dl:first-child, .fed-scre-list dl:first-child { border: 0 }
 .fed-casc-list dt, .fed-scre-list dt { padding: 0 .625rem 0 0 }
 .fed-casc-list dd, .fed-casc-list dt, .fed-scre-list dd, .fed-scre-list dt { display: inline-block }
@@ -596,7 +599,6 @@ body { padding-bottom: 3.4375rem }
 .fed-list-rank li { padding-top: 1rem }
 }
 
-
 .hy-index-tags li a{border: 1px solid #ffe28a; background-color: transparent; color: #ffe28a;}
 .hy-index-tags li a:hover{ background-color: #ffffff; color: #fff;}
 .hy-index-tags li a:hover{ background: none; color: #fff;}
@@ -648,7 +650,6 @@ body { padding-bottom: 3.4375rem }
 	white-space:nowrap;
 	width:100%
 }
-
 @media screen and (min-width: 768px) {
 
  .alibaba{
@@ -663,6 +664,14 @@ display:none; }
 @media screen and (min-width: 768px) {
 
  .aliyun{
+
+display:none; }
+
+} 
+
+@media screen and (max-width: 768px) {
+
+ .aliyun2{
 
 display:none; }
 
